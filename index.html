@@ -1,46 +1,53 @@
+<!-- The <!DOCTYPE html> declaration defines the document type and version of HTML being used. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clickable Button</title>
+    <!-- The <head> element contains metadata about the document like character encoding, viewport settings, and the title of the page. -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document (UTF-8). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to the width of the device and initial scale of 1.0. -->
+    <title>Clickable Button</title> <!-- Sets the title of the page displayed in the browser tab. -->
+
+    <!-- Embedded CSS styles -->
     <style>
+        /* Styling for the body */
         body {
+            /* Flexbox properties to align content */
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            min-height: 100vh;
-            margin: 20px;
-            background-image: url("https://images.pexels.com/photos/7377705/pexels-photo-7377705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-            background-size: cover;
+            min-height: 100vh; /* Minimum height of the body to cover the full viewport height */
+            margin: 20px; /* Margin around the body content */
+            background-image: url("https://images.pexels.com/photos/7377705/pexels-photo-7377705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); /* Background image URL */
+            background-size: cover; /* Cover the entire background with the image */
         }
+
+        /* Styling for the button with class 'button' */
         .button {
-            --bouncing-offset: 0.35em;
-            --bg: 198, 60%, 48%;
-            background-color: hsl(var(--bg));
-            color: white;
-            border: 0;
-            border-radius: 0.5em;
-            padding: 1em;
-            font-size: 2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            line-height: 1;
-            cursor: pointer;
-            box-shadow: 0 var(--bouncing-offset) 0 0 hsl(var(--bg), 0.5);
+            --bouncing-offset: 0.35em; /* Variable for defining the bouncing offset */
+            --bg: 198, 60%, 48%; /* Variable for defining the background color in HSL format */
+            background-color: hsl(var(--bg)); /* Background color using HSL color format */
+            color: white; /* Text color */
+            border: 0; /* No border */
+            border-radius: 0.5em; /* Border radius to create rounded corners */
+            padding: 1em; /* Padding around the button text */
+            font-size: 2rem; /* Font size */
+            font-weight: 700; /* Font weight (bold) */
+            text-transform: uppercase; /* Text transformed to uppercase */
+            line-height: 1; /* Line height */
+            cursor: pointer; /* Cursor style (pointer) */
+            box-shadow: 0 var(--bouncing-offset) 0 0 hsl(var(--bg), 0.5); /* Box shadow effect */
         }
+
+        /* Styling for the button when active or focused */
         .button:active,
         .button:focus-visible {
-            transform: translateY(var(--bouncing-offset));
-            box-shadow: none;
+            transform: translateY(var(--bouncing-offset)); /* Move the button downwards slightly when clicked */
+            box-shadow: none; /* Remove the box shadow when clicked or focused */
         }
     </style>
 </head>
 <body>
-    <button class="button">Click me</button>
+    <!-- The <button> element creates a clickable button on the webpage with the class 'button' applied to it. -->
+    <button class="button">Click me</button> <!-- Button text -->
 </body>
 </html>
-
-
-
-
